@@ -91,7 +91,7 @@ export default function TopBar() {
 	useGSAP(
 		() => {
 			const items = Array.from(linksContainer.current.children);
-			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 100 });
+			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 200 });
 			items.forEach((item) => {
 				item.addEventListener('mouseenter', () => tl.pause());
 				item.addEventListener('mouseleave', () => tl.resume());
@@ -107,7 +107,7 @@ export default function TopBar() {
 	);
 
 	return (
-		<div className="top-bar px-5 py-1 font-montserrat font-medium text-sm bg-blue">
+		<div className="top-bar relative w-full px-5 py-1 font-montserrat font-medium text-sm bg-blue">
 			<div ref={linksContainer} className="links flex gap-20 whitespace-nowrap overflow-hidden">
 				<a href="#" className="text-white text-center uppercase w-full hover:underline">
 					get upto 65% off

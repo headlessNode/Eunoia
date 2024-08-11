@@ -12,7 +12,11 @@ export default {
 		fontFamily: {
 			montserrat: ['Montserrat', 'sans-serif'],
 		},
-		extend: {},
+		extend: {
+			maxWidth: {
+				'8xl': '90rem',
+			},
+		},
 	},
 	plugins: [],
 };
