@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 export default function TopBar() {
-	const barContainer = useRef(null);
+	const linksContainer = useRef(null);
 
 	function horizontalLoop(items, config) {
 		items = gsap.utils.toArray(items);
@@ -90,8 +90,8 @@ export default function TopBar() {
 
 	useGSAP(
 		() => {
-			const items = Array.from(barContainer.current.children);
-			const tl = horizontalLoop(items, { speed: 1.5, repeat: -1, paddingRight: 100 });
+			const items = Array.from(linksContainer.current.children);
+			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 100 });
 			items.forEach((item) => {
 				item.addEventListener('mouseenter', () => tl.pause());
 				item.addEventListener('mouseleave', () => tl.resume());
@@ -103,32 +103,31 @@ export default function TopBar() {
 				});
 			};
 		},
-		{ scope: barContainer }
+		{ scope: linksContainer }
 	);
 
 	return (
-		<div
-			ref={barContainer}
-			className="top-bar px-5 py-1 font-montserrat font-medium text-sm flex gap-20 bg-blue whitespace-nowrap overflow-hidden"
-		>
-			<a href="#" className="text-white text-center uppercase w-full hover:underline">
-				get upto 65% off
-			</a>
-			<a href="#" className="text-white text-center uppercase w-full hover:underline">
-				free shipping on orders $50+
-			</a>
-			<a href="#" className="text-white text-center uppercase w-full hover:underline">
-				get your $20 bonus reward
-			</a>
-			<a href="#" className="text-white text-center uppercase w-full hover:underline">
-				get upto 65% off
-			</a>
-			<a href="#" className="text-white text-center uppercase w-full hover:underline">
-				free shipping on orders $50+
-			</a>
-			<a href="#" className="text-white text-center uppercase w-full hover:underline">
-				get your $20 bonus reward
-			</a>
+		<div className="top-bar px-5 py-1 font-montserrat font-medium text-sm bg-blue">
+			<div ref={linksContainer} className="links flex gap-20 whitespace-nowrap overflow-hidden">
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					get upto 65% off
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					free shipping on orders $50+
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					get your $20 bonus reward
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					get upto 65% off
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					free shipping on orders $50+
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					get your $20 bonus reward
+				</a>
+			</div>
 		</div>
 	);
 }

@@ -6,7 +6,7 @@ export default {
 			md: '820px',
 		},
 		colors: {
-			blue: '#3D58B8',
+			blue: '#4170e8',
 			white: '#FFFFFF',
 		},
 		fontFamily: {
