@@ -1,8 +1,8 @@
-import { useRef } from 'react';
+import { useRef, forwardRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-export default function TopBar() {
+const TopBar = forwardRef(function TopBar(props, ref) {
 	const linksContainer = useRef(null);
 
 	function horizontalLoop(items, config) {
@@ -107,7 +107,7 @@ export default function TopBar() {
 	);
 
 	return (
-		<div className="top-bar relative w-full px-5 py-1 font-montserrat font-medium text-sm bg-blue">
+		<div ref={ref} className="top-bar relative w-full px-5 py-1 font-montserrat font-medium text-sm bg-blue">
 			<div ref={linksContainer} className="links flex gap-20 whitespace-nowrap overflow-hidden">
 				<a href="#" className="text-white text-center uppercase w-full hover:underline">
 					get upto 65% off
@@ -130,4 +130,6 @@ export default function TopBar() {
 			</div>
 		</div>
 	);
-}
+});
+
+export default TopBar;
