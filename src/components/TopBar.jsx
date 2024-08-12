@@ -91,7 +91,7 @@ const TopBar = forwardRef(function TopBar(props, ref) {
 	useGSAP(
 		() => {
 			const items = Array.from(linksContainer.current.children);
-			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 200 });
+			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 80 });
 			items.forEach((item) => {
 				item.addEventListener('mouseenter', () => tl.pause());
 				item.addEventListener('mouseleave', () => tl.resume());
