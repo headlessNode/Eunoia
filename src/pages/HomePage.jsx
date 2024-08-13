@@ -1,7 +1,7 @@
-import TopBar from './components/TopBar';
-import Header from './components/Header';
+import TopBar from '../components/TopBar';
+import Header from '../components/Header';
 
-function App() {
+export default function HomePage() {
 	return (
 		<div className="flex flex-col items-center">
 			<TopBar />
@@ -11,5 +11,3 @@ function App() {
 		</div>
 	);
 }
-
-export default App;

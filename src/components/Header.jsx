@@ -56,10 +56,18 @@ export default function Header() {
 		<div ref={headerContainer} className="header-container px-3 py-5 w-full flex flex-col">
 			<nav className="header font-montserrat flex justify-between items-center">
 				<div className="w-full hidden lg:flex lg:justify-start lg:gap-8">
-					<NavLink className="uppercase hover:underline">shop</NavLink>
-					<NavLink className="uppercase hover:underline">men</NavLink>
-					<NavLink className="uppercase hover:underline">women</NavLink>
-					<NavLink className="uppercase hover:underline">kids</NavLink>
+					<NavLink to="shop" className="uppercase hover:underline">
+						shop
+					</NavLink>
+					<NavLink to="category/men" className="uppercase hover:underline">
+						men
+					</NavLink>
+					<NavLink to="category/women" className="uppercase hover:underline">
+						women
+					</NavLink>
+					<NavLink to="category/kids" className="uppercase hover:underline">
+						kids
+					</NavLink>
 				</div>
 				<div className="w-full flex justify-start lg:justify-center">
 					<NavLink to="/" className="uppercase font-medium text-2xl">
@@ -67,8 +75,12 @@ export default function Header() {
 					</NavLink>
 				</div>
 				<div className="w-full hidden lg:flex lg:justify-end lg:gap-8">
-					<NavLink className="uppercase hover:underline">about</NavLink>
-					<NavLink className="uppercase hover:underline">contact</NavLink>
+					<NavLink to="about" className="uppercase hover:underline">
+						about
+					</NavLink>
+					<NavLink to="contact" className="uppercase hover:underline">
+						contact
+					</NavLink>
 					<button>
 						<i className="fa-solid fa-magnifying-glass fa-xl"></i>
 					</button>
@@ -99,12 +111,24 @@ export default function Header() {
 				ref={menu}
 				className={`menu py-5 font-medium relative ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'}`}
 			>
-				<NavLink className="uppercase hover:underline">shop</NavLink>
-				<NavLink className="uppercase hover:underline">men</NavLink>
-				<NavLink className="uppercase hover:underline">women</NavLink>
-				<NavLink className="uppercase hover:underline">kids</NavLink>
-				<NavLink className="uppercase hover:underline">about</NavLink>
-				<NavLink className="uppercase hover:underline">contact</NavLink>
+				<NavLink to="shop" className="uppercase hover:underline">
+					shop
+				</NavLink>
+				<NavLink to="category/men" className="uppercase hover:underline">
+					men
+				</NavLink>
+				<NavLink to="category/women" className="uppercase hover:underline">
+					women
+				</NavLink>
+				<NavLink to="category/kids" className="uppercase hover:underline">
+					kids
+				</NavLink>
+				<NavLink to="about" className="uppercase hover:underline">
+					about
+				</NavLink>
+				<NavLink to="contact" className="uppercase hover:underline">
+					contact
+				</NavLink>
 			</div>
 		</div>
 	);
