@@ -3,7 +3,11 @@ export default {
 	content: ['./index.html', './src/**/*.{js,jsx}'],
 	theme: {
 		screens: {
+			sm: '640px',
 			md: '820px',
+			lg: '1024px',
+			xl: '1280px',
+			'2xl': '1536px',
 		},
 		colors: {
 			blue: '#4170e8',
@@ -12,7 +16,11 @@ export default {
 		fontFamily: {
 			montserrat: ['Montserrat', 'sans-serif'],
 		},
-		extend: {},
+		extend: {
+			maxWidth: {
+				'8xl': '90rem',
+			},
+		},
 	},
 	plugins: [],
 };
