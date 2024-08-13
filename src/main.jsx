@@ -1,12 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import HomePage from './pages/HomePage.jsx';
-import ShopPage from './pages/ShopPage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import MensPage from './pages/MensPage.jsx';
-import WomensPage from './pages/WomensPage.jsx';
-import KidsPage from './pages/KidsPage.jsx';
+import HomePage from './pages/home/HomePage.jsx';
+import ShopPage from './pages/shop/ShopPage.jsx';
+import AboutPage from './pages/about/AboutPage.jsx';
+import ContactPage from './pages/contact/ContactPage.jsx';
+import MensPage from './pages/categories/MensPage.jsx';
+import WomensPage from './pages/categories/WomensPage.jsx';
+import KidsPage from './pages/categories/KidsPage.jsx';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
 
@@ -15,7 +15,6 @@ const router = createBrowserRouter([
 		path: '/',
 		element: <HomePage />,
 	},
-
 	{
 		path: 'about',
 		element: <AboutPage />,

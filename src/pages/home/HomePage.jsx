@@ -1,5 +1,5 @@
-import TopBar from '../components/TopBar';
-import Header from '../components/Header';
+import TopBar from './components/TopBar';
+import Header from './components/Header';
 
 export default function HomePage() {
 	return (
