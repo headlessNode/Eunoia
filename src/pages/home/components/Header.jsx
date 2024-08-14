@@ -53,7 +53,7 @@ export default function Header() {
 	}, [isMenuActive]);
 
 	return (
-		<div ref={headerContainer} className="header-container px-3 py-5 w-full flex flex-col">
+		<div ref={headerContainer} className="header-container px-3 py-5 w-full flex flex-col z-10">
 			<nav className="header font-montserrat flex justify-between items-center">
 				<div className="w-full hidden lg:flex lg:justify-start lg:gap-8">
 					<NavLink to="shop" className="uppercase hover:underline">
