@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 
 export default function HomePage() {
 	return (
-		<div className="absolute w-full flex flex-col items-center">
+		<div className="w-full relative flex flex-col items-center">
 			<TopBar />
 			<div className="wrapper max-w-8xl w-full">
 				<Header />
