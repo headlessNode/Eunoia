@@ -1,11 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { useRef, useState } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 
-export default function Header() {
-	const [isMenuActive, setIsMenuActive] = useState(false);
-	const menu = useRef(null);
+export default function Header({ isMenuActive, setIsMenuActive }) {
 	const headerContainer = useRef(null);
 
 	function showMenu() {
@@ -16,44 +12,11 @@ export default function Header() {
 		}
 	}
 
-	function menuAnimation(scale, pathOne, pathTwo) {
-		const tl = gsap
-			.timeline()
-			.to(menu.current, {
-				transformOrigin: 'top center',
-				scaleY: scale,
-				ease: 'power1.in',
-				duration: 0.3,
-			})
-			.to(
-				'.menu-icon .svg-line-one',
-				{
-					attr: pathOne,
-					duration: 0.3,
-					ease: 'linear',
-				},
-				'<'
-			)
-			.to(
-				'.menu-icon .svg-line-two',
-				{
-					attr: pathTwo,
-					duration: 0.3,
-					ease: 'linear',
-				},
-				'<'
-			);
-		return tl;
-	}
-
-	useGSAP(() => {
-		isMenuActive
-			? menuAnimation(1, { d: 'M10 30 L50 70' }, { d: 'M10 70 L50 30' })
-			: menuAnimation(0, { d: 'M10 40 L75 40' }, { d: 'M10 60 L75 60' });
-	}, [isMenuActive]);
-
 	return (
-		<div ref={headerContainer} className="header-container px-3 py-5 w-full flex flex-col z-10">
+		<div
+			ref={headerContainer}
+			className="header-container bg-white lg:bg-whiteTransparent px-3 py-5 w-full flex flex-col z-10"
+		>
 			<nav className="header font-montserrat flex justify-between items-center">
 				<div className="w-full hidden lg:flex lg:justify-start lg:gap-8">
 					<NavLink to="shop" className="uppercase hover:underline">
@@ -107,29 +70,6 @@ export default function Header() {
 					</svg>
 				</div>
 			</nav>
-			<div
-				ref={menu}
-				className={`menu py-5 font-medium relative ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'}`}
-			>
-				<NavLink to="shop" className="uppercase hover:underline">
-					shop
-				</NavLink>
-				<NavLink to="category/men" className="uppercase hover:underline">
-					men
-				</NavLink>
-				<NavLink to="category/women" className="uppercase hover:underline">
-					women
-				</NavLink>
-				<NavLink to="category/kids" className="uppercase hover:underline">
-					kids
-				</NavLink>
-				<NavLink to="about" className="uppercase hover:underline">
-					about
-				</NavLink>
-				<NavLink to="contact" className="uppercase hover:underline">
-					contact
-				</NavLink>
-			</div>
 		</div>
 	);
 }
