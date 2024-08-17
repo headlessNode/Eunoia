@@ -45,7 +45,7 @@ export default function Menu({ isMenuActive, setIsMenuActive }) {
 	return (
 		<div
 			ref={menu}
-			className={`menu pb-5 bg-white px-3 font-medium relative ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} z-10`}
+			className={`menu fixed w-full pb-5 bg-white px-3 font-medium ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} z-10`}
 		>
 			<NavLink to="shop" className="uppercase hover:underline">
 				shop
