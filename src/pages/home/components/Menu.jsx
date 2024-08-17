@@ -6,12 +6,12 @@ import { useGSAP } from '@gsap/react';
 export default function Menu({ isMenuActive, setIsMenuActive }) {
 	const menu = useRef(null);
 
-	function menuAnimation(scale, pathOne, pathTwo) {
+	function menuAnimation(height, pathOne, pathTwo) {
 		const tl = gsap
 			.timeline()
 			.to(menu.current, {
 				transformOrigin: 'top center',
-				scaleY: scale,
+				height: height,
 				ease: 'power1.in',
 				duration: 0.3,
 			})
@@ -38,14 +38,14 @@ export default function Menu({ isMenuActive, setIsMenuActive }) {
 
 	useGSAP(() => {
 		isMenuActive
-			? menuAnimation(1, { d: 'M10 30 L50 70' }, { d: 'M10 70 L50 30' })
+			? menuAnimation('auto', { d: 'M10 30 L50 70' }, { d: 'M10 70 L50 30' })
 			: menuAnimation(0, { d: 'M10 40 L75 40' }, { d: 'M10 60 L75 60' });
 	}, [isMenuActive]);
 
 	return (
 		<div
 			ref={menu}
-			className={`menu fixed w-full pb-5 bg-white px-3 font-medium ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} z-10`}
+			className={`menu fixed w-full pb-5 bg-white px-3 font-medium ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} z-10 overflow-hidden`}
 		>
 			<NavLink to="shop" className="uppercase hover:underline">
 				shop
