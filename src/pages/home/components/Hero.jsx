@@ -46,12 +46,17 @@ export default function Hero() {
 	});
 
 	return (
-		<div className="hero w-full h-full lg:absolute lg:h-screen lg:top-0 lg:left-0 flex flex-col lg:items-center bg-hero-img bg-cover bg-top lg:-z-10">
-			<div className="hero-cta h-full py-64 md:px-3 flex flex-col gap-5 items-center justify-center md:items-start max-w-8xl w-full font-montserrat">
+		<div className="hero max-w-8xl w-full h-full flex flex-col lg:items-center">
+			<div className="hero-cta w-full h-full font-montserrat py-64 md:px-3 flex flex-col gap-10 items-center justify-center md:items-start">
 				<h1 className="font-afacad font-bold text-5xl text-center tracking-wide text-white uppercase md:text-6xl lg:text-7xl md:text-start lg:w-[35rem] md:w-[30rem] sm:w-1/2">
 					where style meets elegance
 				</h1>
-				<NavLink to="shop" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+				<NavLink
+					to="shop"
+					className="rounded-full overflow-hidden"
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}
+				>
 					<svg ref={btn} viewBox="0 0 160 60" width={160} height={60}>
 						<rect width={160} height={60} rx={25} ry={25} fill="#FFFFFF" />
 						<circle ref={circle} r={5} cy={30} cx={20} fill="#4170e8" />

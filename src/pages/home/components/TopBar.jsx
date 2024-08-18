@@ -107,8 +107,17 @@ const TopBar = forwardRef(function TopBar(props, ref) {
 	);
 
 	return (
-		<div ref={ref} className="top-bar relative w-full px-5 py-1 font-montserrat font-medium text-sm bg-blue">
+		<div ref={ref} className="top-bar w-full px-10 py-1 font-montserrat font-medium text-sm bg-blue">
 			<div ref={linksContainer} className="links flex gap-20 whitespace-nowrap overflow-hidden">
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					get upto 65% off
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					free shipping on orders $50+
+				</a>
+				<a href="#" className="text-white text-center uppercase w-full hover:underline">
+					get your $20 bonus reward
+				</a>
 				<a href="#" className="text-white text-center uppercase w-full hover:underline">
 					get upto 65% off
 				</a>
