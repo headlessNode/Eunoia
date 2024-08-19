@@ -12,13 +12,18 @@ export default {
 		colors: {
 			blue: '#4170e8',
 			white: '#FFFFFF',
+			whiteTransparent: 'rgba(255, 255, 255, 0)',
 		},
 		fontFamily: {
 			montserrat: ['Montserrat', 'sans-serif'],
+			afacad: ['Afacad', 'sans-serif'],
 		},
 		extend: {
 			maxWidth: {
 				'8xl': '90rem',
+			},
+			backgroundImage: {
+				'hero-img': 'url(/images/hero-img.jpg)',
 			},
 		},
 	},
