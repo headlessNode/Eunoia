@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-export default function Menu({ isMenuActive, setIsMenuActive }) {
+export default function Menu({ isMenuActive }) {
 	const menu = useRef(null);
 
 	function menuAnimation(height, pathOne, pathTwo) {

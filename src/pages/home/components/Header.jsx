@@ -1,10 +1,15 @@
 import TopBar from './TopBar';
 import Menu from './Menu';
 import { NavLink } from 'react-router-dom';
-import { useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
 
-export default function Header() {
+const Header = forwardRef(function Header(props, ref) {
 	const headerContainer = useRef(null);
+	const topBar = useRef(null);
 	const [isMenuActive, setIsMenuActive] = useState(false);
 
 	function showMenu() {
@@ -15,14 +20,31 @@ export default function Header() {
 		}
 	}
 
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: ref.current,
+					start: 'center 40%',
+					//onEnter, onLeave, onEnterBack, onLeaveBack
+					toggleActions: 'play none none reverse',
+				},
+			});
+			tl.to(headerContainer.current, {
+				background: '#FFFFFF',
+			});
+		},
+		{ scope: ref.current }
+	);
+
 	return (
-		<div className="fixed w-full flex flex-col items-center">
-			<TopBar />
+		<div className="fixed w-full flex flex-col items-center z-10">
+			<TopBar ref={topBar} />
 			<div
 				ref={headerContainer}
-				className="header-container max-w-8xl w-full bg-white lg:bg-whiteTransparent px-3 py-4 flex flex-col gap-4"
+				className="header-container w-full bg-white lg:bg-whiteTransparent px-3 py-4 flex flex-col items-center gap-4"
 			>
-				<nav className="header font-montserrat flex justify-between items-center">
+				<nav className="header max-w-8xl w-full font-montserrat flex justify-between items-center">
 					<div className="w-full hidden lg:flex lg:justify-start lg:gap-8">
 						<NavLink to="shop" className="uppercase hover:underline">
 							shop
@@ -79,4 +101,6 @@ export default function Header() {
 			</div>
 		</div>
 	);
-}
+});
+
+export default Header;

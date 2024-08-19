@@ -47,7 +47,7 @@ export default function Hero() {
 
 	return (
 		<div className="hero max-w-8xl w-full h-full flex flex-col lg:items-center">
-			<div className="hero-cta w-full h-full font-montserrat py-64 md:px-3 flex flex-col gap-10 items-center justify-center md:items-start">
+			<div className="hero-cta w-full h-full font-montserrat px-3 flex flex-col gap-10 items-center justify-center md:items-start">
 				<h1 className="font-afacad font-bold text-5xl text-center tracking-wide text-white uppercase md:text-6xl lg:text-7xl md:text-start lg:w-[35rem] md:w-[30rem] sm:w-1/2">
 					where style meets elegance
 				</h1>
