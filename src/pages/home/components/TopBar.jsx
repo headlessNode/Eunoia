@@ -8,7 +8,7 @@ const TopBar = forwardRef(function TopBar(props, ref) {
 	useGSAP(
 		() => {
 			const items = Array.from(linksContainer.current.children);
-			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 80 });
+			const tl = horizontalLoop(items, { speed: 0.6, repeat: -1, paddingRight: 80 });
 			items.forEach((item) => {
 				item.addEventListener('mouseenter', () => tl.pause());
 				item.addEventListener('mouseleave', () => tl.resume());
@@ -24,7 +24,7 @@ const TopBar = forwardRef(function TopBar(props, ref) {
 	);
 
 	return (
-		<div ref={ref} className="top-bar w-full px-3 xl:px-7 py-1 font-montserrat font-medium text-sm bg-blue">
+		<div ref={ref} className="top-bar w-full px-3 xl:px-7 py-1 font-montserrat font-medium text-xs bg-blue">
 			<div ref={linksContainer} className="links flex gap-20 whitespace-nowrap overflow-hidden">
 				<a href="#" className="text-white text-center uppercase w-full hover:underline">
 					get upto 65% off
