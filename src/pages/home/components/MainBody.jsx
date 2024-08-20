@@ -8,7 +8,7 @@ export default function MainBody() {
 	useGSAP(
 		() => {
 			const items = Array.from(logosContainer.current.children);
-			const tl = horizontalLoop(items, { speed: 1, repeat: -1, paddingRight: 128 });
+			const tl = horizontalLoop(items, { speed: 0.8, repeat: -1, paddingRight: 128 });
 		},
 		{ scope: logosContainer }
 	);
