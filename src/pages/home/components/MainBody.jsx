@@ -1,8 +1,6 @@
 import LogoBar from './LogoBar';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 
 function Featured({ featured }) {
 	return (
@@ -28,6 +26,36 @@ function Featured({ featured }) {
 	);
 }
 
+function Exclusive() {
+	return (
+		<div className="exclusive relative">
+			<div className="py-32 flex justify-center">
+				<video
+					src="/videos/exclusive.mp4"
+					muted
+					loop
+					autoPlay
+					controls={false}
+					aria-label="Exclusive video"
+					className="exclusive-video py-5 h-[600px] w-full object-cover"
+				></video>
+				<div className="absolute flex flex-col gap-2 text-white max-w-[450px] w-full top-1/2 left-10">
+					<h1 className="font-semibold text-4xl">Eunoia Exclusive Deal</h1>
+					<p className="text-base">
+						Discover the epitome of style with Serrena Exclusives. Elevate your wardrobe with premium
+						brands, where luxury meets fashion. Immerse yourself in a world of unparalleled elegance.
+						Explore now!
+					</p>
+					<NavLink to="shop" className="py-4 flex gap-4 items-center">
+						<p className="font-semibold">Visit Shop</p>
+						<i className="fa-solid fa-arrow-right"></i>
+					</NavLink>
+				</div>
+			</div>
+		</div>
+	);
+}
+
 export default function MainBody({ products }) {
 	const [featured, setFeatured] = useState([]);
 
@@ -46,6 +74,7 @@ export default function MainBody({ products }) {
 		<div className="main-body px-3 max-w-8xl w-full h-screen font-montserrat">
 			<LogoBar />
 			<Featured featured={featured} />
+			<Exclusive />
 		</div>
 	);
 }
