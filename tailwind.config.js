@@ -10,9 +10,11 @@ export default {
 			'2xl': '1536px',
 		},
 		colors: {
-			blue: '#4170e8',
+			blue: '#3769E6',
+			lightblue: '#5C84EB',
 			white: '#FFFFFF',
 			whiteTransparent: 'rgba(255, 255, 255, 0)',
+			black: '#000000',
 		},
 		fontFamily: {
 			montserrat: ['Montserrat', 'sans-serif'],
