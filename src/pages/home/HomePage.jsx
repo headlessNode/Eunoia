@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import MainBody from './components/MainBody';
+import Footer from './components/Footer';
 
 export default function HomePage() {
 	const heroRef = useRef(null);
@@ -34,6 +35,7 @@ export default function HomePage() {
 				<Hero />
 			</div>
 			<MainBody products={products} />
+			<Footer />
 		</div>
 	);
 }
