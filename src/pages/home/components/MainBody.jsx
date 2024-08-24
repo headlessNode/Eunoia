@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 function Featured({ featured }) {
 	return (
-		<div className="best-seller mt-16 flex flex-col gap-12">
-			<h2 className="uppercase text-black text-2xl font-semibold">best seller</h2>
+		<div className="best-seller mt-16 flex flex-col gap-12 font-afacad">
+			<h2 className="uppercase text-black text-5xl font-semibold">best seller</h2>
 			<div className="products flex flex-wrap justify-center items-center gap-16">
 				{featured.map((item) => {
 					return (
@@ -14,8 +14,11 @@ function Featured({ featured }) {
 							key={`${item.id}`}
 						>
 							<img src={`${item.image}`} className="w-96 h-52 object-contain" />
-							<p className="text-center text-sm font-semibold">{item.title}</p>
-							<NavLink to="shop" className="w-full rounded-md bg-blue hover:bg-lightblue text-white p-3">
+							<p className="text-center text-lg font-semibold">{item.title}</p>
+							<NavLink
+								to="shop"
+								className="w-full text-lg rounded-md bg-blue hover:bg-lightblue text-white p-3"
+							>
 								<button className="text-center w-full">Shop Now</button>
 							</NavLink>
 						</div>
