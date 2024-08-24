@@ -39,12 +39,11 @@ function Exclusive() {
 					aria-label="Exclusive video"
 					className="exclusive-video py-5 h-[600px] w-full object-cover"
 				></video>
-				<div className="absolute flex flex-col gap-2 text-white max-w-[450px] w-full top-1/2 left-10">
+				<div className="absolute px-3 flex flex-col gap-2 text-white sm:w-[450px] top-64 sm:top-1/2 sm:left-10">
 					<h1 className="font-semibold text-4xl">Eunoia Exclusive Deal</h1>
 					<p className="text-base">
-						Discover the epitome of style with Serrena Exclusives. Elevate your wardrobe with premium
-						brands, where luxury meets fashion. Immerse yourself in a world of unparalleled elegance.
-						Explore now!
+						Discover the epitome of style with Eunoia Exclusives. Elevate your wardrobe with premium brands,
+						where luxury meets fashion. Immerse yourself in a world of unparalleled elegance. Explore now!
 					</p>
 					<NavLink to="shop" className="py-4 flex gap-4 items-center">
 						<p className="font-semibold">Visit Shop</p>
@@ -71,10 +70,22 @@ export default function MainBody({ products }) {
 	}, [products]);
 
 	return (
-		<div className="main-body px-3 max-w-8xl w-full h-screen font-montserrat">
-			<LogoBar />
-			<Featured featured={featured} />
-			<Exclusive />
+		<div className="main-body w-full flex flex-col items-center">
+			<div className="px-3 max-w-8xl w-full font-montserrat">
+				<LogoBar />
+				<Featured featured={featured} />
+				<Exclusive />
+				<div className="bg-blue absolute left-0 w-full flex justify-center">
+					<div className="news-letter px-3 max-w-8xl w-full py-16 flex flex-col items-center gap-10 md:flex-row md:justify-between font-afacad">
+						<p className="text-white font-semibold text-4xl max-w-[360px] w-full text-center sm:text-start">
+							Sign up to our newsletter & get 20% Off
+						</p>
+						<button className="bg-white w-48 py-3 text-center text-xl font-semibold">
+							SIGN UP FOR FREE
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
