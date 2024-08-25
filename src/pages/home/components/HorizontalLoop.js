@@ -3,7 +3,12 @@ import gsap from 'gsap';
 export default function horizontalLoop(items, config) {
 	items = gsap.utils.toArray(items);
 	config = config || {};
-	let tl = gsap.timeline({ repeat: config.repeat, paused: config.paused, defaults: { ease: 'none' } }),
+	let tl = gsap.timeline({
+			repeat: config.repeat,
+			paused: config.paused,
+			defaults: { ease: 'none' },
+			onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+		}),
 		length = items.length,
 		startX = items[0].offsetLeft,
 		times = [],
@@ -50,7 +55,9 @@ export default function horizontalLoop(items, config) {
 		)
 			.fromTo(
 				item,
-				{ xPercent: snap(((curX - distanceToLoop + totalWidth) / widths[i]) * 100) },
+				{
+					xPercent: snap(((curX - distanceToLoop + totalWidth) / widths[i]) * 100),
+				},
 				{
 					xPercent: xPercents[i],
 					duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
@@ -80,5 +87,10 @@ export default function horizontalLoop(items, config) {
 	tl.current = () => curIndex;
 	tl.toIndex = (index, vars) => toIndex(index, vars);
 	tl.times = times;
+	tl.progress(1, true).progress(0, true); // pre-render for performance
+	if (config.reversed) {
+		tl.vars.onReverseComplete();
+		tl.reverse();
+	}
 	return tl;
 }

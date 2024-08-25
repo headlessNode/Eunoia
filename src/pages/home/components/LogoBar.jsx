@@ -8,7 +8,8 @@ export default function LogoBar() {
 	useGSAP(
 		() => {
 			const items = Array.from(logosContainer.current.children);
-			const tl = horizontalLoop(items, { speed: 0.8, repeat: -1, paddingRight: 160 });
+			let config = { speed: 0.8, repeat: -1, paddingRight: 160 };
+			const tl = horizontalLoop(items, config);
 		},
 		{ scope: logosContainer }
 	);
