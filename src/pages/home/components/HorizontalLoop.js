@@ -2,6 +2,7 @@ import gsap from 'gsap';
 
 export default function horizontalLoop(items, config) {
 	items = gsap.utils.toArray(items);
+	console.log(items);
 	config = config || {};
 	let tl = gsap.timeline({
 			repeat: config.repeat,

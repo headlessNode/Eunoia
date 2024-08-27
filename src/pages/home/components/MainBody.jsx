@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import horizontalLoop from './HorizontalLoop';
 
 function Featured({ featured }) {
 	return (
@@ -16,7 +17,7 @@ function Featured({ featured }) {
 							key={`${item.id}`}
 						>
 							<img src={item.image} className="w-96 h-52 object-contain" />
-							<p className="text-center text-lg font-semibold">{item.title}</p>
+							<p className="text-center text-lg font-semibold">{item.name}</p>
 							<NavLink
 								to="shop"
 								className="w-full text-lg rounded-md bg-blue hover:bg-lightblue text-white p-3"
@@ -60,26 +61,154 @@ function Exclusive() {
 	);
 }
 
+function Carousel({ carouselItems }) {
+	const carousel = useRef(null);
+	const { contextSafe } = useGSAP({ scope: carousel.current });
+	const itemsRef = useRef([]);
+	const [refsReady, setRefsReady] = useState(false);
+	const timeline = useRef();
+
+	useEffect(() => {
+		if (itemsRef.current.length > 0) {
+			const arr = gsap.utils.toArray(itemsRef.current);
+			console.log(arr);
+			timeline.current = horizontalLoop(arr, { repeat: -1, paddingRight: 16 });
+		}
+	}, [refsReady]);
+
+	const setItemsRef = (el, i) => {
+		if (el && !itemsRef.current[i]) {
+			itemsRef.current[i] = el;
+			if (i === carouselItems.length - 1) {
+				setRefsReady(true);
+			}
+		}
+	};
+
+	const showOverlay = contextSafe((e) => {
+		const item = e.target.parentNode;
+		const overlay = item.querySelector('.overlay');
+		overlay.classList.remove('hidden');
+		overlay.classList.add('flex');
+		overlay.classList.add('justify-center');
+		overlay.classList.add('items-center');
+		gsap.to(overlay, {
+			opacity: 1,
+			duration: 0.3,
+			ease: 'linear',
+		});
+	});
+
+	const hideOverlay = contextSafe((e) => {
+		const item = e.target.parentNode;
+		const overlay = item.querySelector('.overlay');
+		gsap.to(overlay, {
+			opacity: 0,
+			duration: 0.3,
+			ease: 'linear',
+			onComplete: () => {
+				overlay.classList.add('hidden');
+				overlay.classList.remove('flex');
+				overlay.classList.remove('justify-center');
+				overlay.classList.remove('items-center');
+			},
+		});
+	});
+
+	const showNext = contextSafe(() => {
+		timeline.current.next({ duration: 1, ease: 'power1.inOut' });
+	});
+
+	const showPrevious = contextSafe(() => {
+		timeline.current.previous({ duration: 1, ease: 'power1.inOut' });
+	});
+
+	return (
+		<div className="pb-32 w-full flex flex-col gap-10 font-afacad">
+			<div className="flex justify-start">
+				<h1 className="text-5xl font-semibold">YOU MAY ALSO LIKE</h1>
+			</div>
+			<div className="flex justify-center">
+				<div
+					ref={carousel}
+					className="relative w-72 sm:w-[592px] min-[940px]:w-[896px] xl:w-[1200px] carousel overflow-hidden"
+				>
+					<div className="flex gap-4">
+						{carouselItems.map((item, i) => {
+							return (
+								<div
+									ref={(el) => setItemsRef(el, i)}
+									className="carousel-item w-72 flex flex-col gap-4 flex-shrink-0"
+									key={`${item.id}`}
+								>
+									<div onMouseEnter={showOverlay} onMouseLeave={hideOverlay} className="relative">
+										<div>
+											<img src={item.image} alt={item.name} className="object-cover" />
+											<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
+												<NavLink to="shop" className="w-28 text-l bg-white p-3">
+													<button className="text-center w-full">Shop Now</button>
+												</NavLink>
+											</div>
+										</div>
+									</div>
+									<div className="flex flex-col items-start text-lg font-semibold">
+										<p className="text-nowrap text-ellipsis overflow-hidden">{item.name}</p>
+										<p className="text-nowrap text-ellipsis overflow-hidden">${item.price}</p>
+									</div>
+								</div>
+							);
+						})}
+					</div>
+					<button
+						onClick={showPrevious}
+						className="absolute top-1/2 left-4 -translate-y-full btn-prev w-10 h-10 rounded-full bg-white bg-opacity-50 flex justify-center items-center"
+					>
+						<i className="fa-solid fa-chevron-left"></i>
+					</button>
+					<button
+						onClick={showNext}
+						className="absolute top-1/2 right-4 -translate-y-full btn-next w-10 h-10 rounded-full bg-white bg-opacity-50 flex justify-center items-center"
+					>
+						<i className="fa-solid fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	);
+}
+
 export default function MainBody({ products }) {
 	const [featured, setFeatured] = useState([]);
+	const [carouselItems, setCarouselItems] = useState([]);
 
 	useEffect(() => {
 		if (products) {
 			let featArr = [];
+			let carArr = [];
 			featArr.push(products[2]);
 			featArr.push(products[3]);
-			featArr.push(products[16]);
-			featArr.push(products[17]);
+			featArr.push(products[4]);
+			featArr.push(products[5]);
+			carArr.push(products[0]);
+			carArr.push(products[1]);
+			carArr.push(products[2]);
+			carArr.push(products[3]);
+			carArr.push(products[4]);
+			carArr.push(products[5]);
+			carArr.push(products[6]);
+			carArr.push(products[7]);
 			setFeatured([...featArr]);
+			setCarouselItems([...carArr]);
 		}
 	}, [products]);
 
 	return (
-		<div className="main-body w-full flex flex-col items-center">
-			<div className="px-3 max-w-8xl w-full font-montserrat">
+		<div className="main-body px-3 w-full flex flex-col items-center">
+			<div className="max-w-8xl w-full font-montserrat">
 				<LogoBar />
 				<Featured featured={featured} />
 				<Exclusive />
+				<Carousel carouselItems={carouselItems} />
 			</div>
 			<div className="bg-blue w-full flex justify-center">
 				<div className="news-letter px-3 max-w-8xl w-full py-16 flex flex-col items-center gap-10 md:flex-row md:justify-between font-afacad">

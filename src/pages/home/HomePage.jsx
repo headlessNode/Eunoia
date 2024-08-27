@@ -9,7 +9,7 @@ export default function HomePage() {
 	const [products, setProducts] = useState(null);
 
 	function getProducts() {
-		return fetch(`https://fakestoreapi.com/products`, { mode: 'cors' })
+		return fetch(`/products/products.json`)
 			.then((res) => {
 				if (!res.ok) {
 					throw new Error(`${res.status} ${res.statusText}`);

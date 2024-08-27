@@ -1,0 +1,58 @@
+[
+	{
+		"id": 1,
+		"name": "Slim Fit T-Shirt",
+		"price": 19.99,
+		"category": "men",
+		"image": "https://images.pexels.com/photos/6764009/pexels-photo-6764009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+	},
+	{
+		"id": 2,
+		"name": "Blue Jeans",
+		"price": 39.99,
+		"category": "men",
+		"image": "https://images.pexels.com/photos/6764143/pexels-photo-6764143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+	},
+	{
+		"id": 3,
+		"name": "Cotton Jacket",
+		"price": 120.0,
+		"category": "men",
+		"image": "https://images.pexels.com/photos/6627007/pexels-photo-6627007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+	},
+	{
+		"id": 4,
+		"name": "Urban Essentials SweatShirt",
+		"price": 120.0,
+		"category": "men",
+		"image": "https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+	},
+	{
+		"id": 5,
+		"name": "White Zip-Up Coat",
+		"price": 19.99,
+		"category": "men",
+		"image": "https://images.pexels.com/photos/6626747/pexels-photo-6626747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+	},
+	{
+		"id": 6,
+		"name": "Checkered Shirt",
+		"price": 120.0,
+		"category": "men",
+		"image": "https://images.pexels.com/photos/7223557/pexels-photo-7223557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+	},
+	{
+		"id": 7,
+		"name": "Slim Fit Flared Twill Pants",
+		"price": 120.0,
+		"category": "men",
+		"image": "https://framerusercontent.com/images/tWk9lVg1x4XLiGVtz6LH22vmY.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Hiking Jacket",
+		"price": 120.0,
+		"category": "men",
+		"image": "https://framerusercontent.com/images/wSnHST3A7kLB2sHtzs5zFsAhPvQ.jpg"
+	}
+]
