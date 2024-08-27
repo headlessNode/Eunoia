@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -68,3 +69,7 @@ export default function Menu({ isMenuActive }) {
 		</div>
 	);
 }
+
+Menu.propTypes = {
+	isMenuActive: PropTypes.bool,
+};

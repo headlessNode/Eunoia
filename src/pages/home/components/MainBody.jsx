@@ -1,6 +1,7 @@
 import LogoBar from './LogoBar';
 import { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import horizontalLoop from './HorizontalLoop';
@@ -221,3 +222,15 @@ export default function MainBody({ products }) {
 		</div>
 	);
 }
+
+MainBody.propTypes = {
+	products: PropTypes.array,
+};
+
+Carousel.propTypes = {
+	carouselItems: PropTypes.array,
+};
+
+Featured.propTypes = {
+	featured: PropTypes.array,
+};
