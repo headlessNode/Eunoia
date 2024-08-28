@@ -1,58 +1,254 @@
 [
 	{
 		"id": 1,
-		"name": "Slim Fit T-Shirt",
-		"price": 19.99,
+		"name": "Loose Jeans",
+		"price": 220.0,
 		"category": "men",
-		"image": "https://images.pexels.com/photos/6764009/pexels-photo-6764009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+		"image": "https://i.imgur.com/ie7SMU1.jpeg"
 	},
 	{
 		"id": 2,
-		"name": "Blue Jeans",
-		"price": 39.99,
+		"name": "Beige Zip-Up Coat",
+		"price": 300.0,
 		"category": "men",
-		"image": "https://images.pexels.com/photos/6764143/pexels-photo-6764143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+		"image": "https://i.imgur.com/Fcdk42T.jpeg"
 	},
 	{
 		"id": 3,
-		"name": "Cotton Jacket",
-		"price": 120.0,
+		"name": "Checkered Shirt",
+		"price": 220.0,
 		"category": "men",
-		"image": "https://images.pexels.com/photos/6627007/pexels-photo-6627007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+		"image": "https://i.imgur.com/eyLtkUS.jpeg"
 	},
 	{
 		"id": 4,
-		"name": "Urban Essentials SweatShirt",
-		"price": 120.0,
+		"name": "Essential Green Cardigan",
+		"price": 350.0,
 		"category": "men",
-		"image": "https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+		"image": "https://i.imgur.com/o6NVOgg.jpeg"
 	},
 	{
 		"id": 5,
-		"name": "White Zip-Up Coat",
-		"price": 19.99,
+		"name": "Urban Essentials SweatShirt",
+		"price": 200.0,
 		"category": "men",
-		"image": "https://images.pexels.com/photos/6626747/pexels-photo-6626747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+		"image": "https://i.imgur.com/5sPTsRn.jpeg"
 	},
 	{
 		"id": 6,
-		"name": "Checkered Shirt",
-		"price": 120.0,
+		"name": "Denim Jacket",
+		"price": 200.0,
 		"category": "men",
-		"image": "https://images.pexels.com/photos/7223557/pexels-photo-7223557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+		"image": "https://i.imgur.com/uv1xNuK.jpeg"
 	},
 	{
 		"id": 7,
-		"name": "Slim Fit Flared Twill Pants",
-		"price": 120.0,
+		"name": "Regular Fit Leather Jacket",
+		"price": 299.0,
 		"category": "men",
-		"image": "https://framerusercontent.com/images/tWk9lVg1x4XLiGVtz6LH22vmY.jpg"
+		"image": "https://i.imgur.com/bXsuM2T.jpeg"
 	},
 	{
 		"id": 8,
-		"name": "Hiking Jacket",
-		"price": 120.0,
+		"name": "Blue Jeans",
+		"price": 100.0,
 		"category": "men",
-		"image": "https://framerusercontent.com/images/wSnHST3A7kLB2sHtzs5zFsAhPvQ.jpg"
+		"image": "https://i.imgur.com/viHe1yx.jpeg"
+	},
+	{
+		"id": 9,
+		"name": "Oversized Fit Cotton T-Shirt",
+		"price": 150.0,
+		"category": "men",
+		"image": "https://i.imgur.com/4e8IB4l.jpeg"
+	},
+	{
+		"id": 10,
+		"name": "Slim Fit Flared Twill Pants",
+		"price": 220.0,
+		"category": "men",
+		"image": "https://i.imgur.com/wPWJAeH.jpeg"
+	},
+	{
+		"id": 11,
+		"name": "Casual Shirt",
+		"price": 199.0,
+		"category": "men",
+		"image": "https://i.imgur.com/MnfbUWb.jpeg"
+	},
+	{
+		"id": 12,
+		"name": "Slim Fit T-Shirt",
+		"price": 150.0,
+		"category": "men",
+		"image": "https://i.imgur.com/QMqrnQH.jpeg"
+	},
+	{
+		"id": 13,
+		"name": "Cotton Twill Jacket",
+		"price": 120.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/3zZ7yOi.jpeg"
+	},
+	{
+		"id": 14,
+		"name": "Trousers",
+		"price": 75.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/V2LGWj3.jpeg"
+	},
+	{
+		"id": 15,
+		"name": "Urban Essential T-Shirt",
+		"price": 50.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/kU54BWh.jpeg"
+	},
+	{
+		"id": 16,
+		"name": "Cotton Polo Shirt",
+		"price": 65.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/khdgZxV.jpeg"
+	},
+	{
+		"id": 17,
+		"name": "Carpenter Joggers",
+		"price": 60.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/V1IdlTl.jpeg"
+	},
+	{
+		"id": 18,
+		"name": "Denim Jacket",
+		"price": 75.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/FxJ1uqw.jpeg"
+	},
+	{
+		"id": 19,
+		"name": "Biker Jacket",
+		"price": 75.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/XTh31lx.jpeg"
+	},
+	{
+		"id": 20,
+		"name": "Cotton Jersey T-Shirt",
+		"price": 50.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/L0DVfIn.jpeg"
+	},
+	{
+		"id": 21,
+		"name": "Twill Jacket",
+		"price": 120.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/qi9dzqj.jpeg"
+	},
+	{
+		"id": 22,
+		"name": "Twill Chinos",
+		"price": 60.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/XBDxFZR.jpeg"
+	},
+	{
+		"id": 23,
+		"name": "Joggers",
+		"price": 60.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/OmDki15.jpeg"
+	},
+	{
+		"id": 24,
+		"name": "Water-Repellent Puffer Jacket",
+		"price": 75.0,
+		"category": "kids",
+		"image": "https://i.imgur.com/Mgyb0QU.jpeg"
+	},
+	{
+		"id": 25,
+		"name": "Cotton Printed Shirt",
+		"price": 190.0,
+		"category": "women",
+		"image": "https://i.imgur.com/JB1s62G.jpeg"
+	},
+	{
+		"id": 26,
+		"name": "V-neck Flared Sleeves Dress",
+		"price": 280.0,
+		"category": "women",
+		"image": "https://i.imgur.com/TRpKJyo.jpeg"
+	},
+	{
+		"id": 27,
+		"name": "Twill Jacket",
+		"price": 120.0,
+		"category": "women",
+		"image": "https://i.imgur.com/C5BKxQF.jpeg"
+	},
+	{
+		"id": 28,
+		"name": "Viscose Shirt Dress",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/BZrcYg5.jpeg"
+	},
+	{
+		"id": 29,
+		"name": "Oversized Crinkled Dress",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/REBV9eV.jpeg"
+	},
+	{
+		"id": 30,
+		"name": "Black Floral Chiffon Dress",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/VIs516t.jpeg"
+	},
+	{
+		"id": 31,
+		"name": "Formal One-Piece Suit",
+		"price": 420.0,
+		"category": "women",
+		"image": "https://i.imgur.com/WchXhFp.jpeg"
+	},
+	{
+		"id": 32,
+		"name": "Slim Fit Blocked Casual Shirt",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/y0D0KjN.jpeg"
+	},
+	{
+		"id": 33,
+		"name": "Eyelet Embroidered Shirt",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/kFmU42N.jpeg"
+	},
+	{
+		"id": 34,
+		"name": "Ruffle Spread Shirt",
+		"price": 350.0,
+		"category": "women",
+		"image": "https://i.imgur.com/IfH7Lmc.jpeg"
+	},
+	{
+		"id": 35,
+		"name": "Linen-Blend Dress",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/08SQtLQ.jpeg"
+	},
+	{
+		"id": 36,
+		"name": "Linen-Blend Shirt",
+		"price": 340.0,
+		"category": "women",
+		"image": "https://i.imgur.com/t0BRgvw.jpeg"
 	}
 ]

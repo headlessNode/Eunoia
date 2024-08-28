@@ -7,24 +7,60 @@ import gsap from 'gsap';
 import horizontalLoop from './HorizontalLoop';
 
 function Featured({ featured }) {
+	const featuredRef = useRef(null);
+	const { contextSafe } = useGSAP({ scope: featuredRef.current });
+
+	const showOverlay = contextSafe((e) => {
+		const item = e.target.parentNode;
+		const overlay = item.querySelector('.overlay');
+		overlay.classList.remove('hidden');
+		overlay.classList.add('flex');
+		overlay.classList.add('justify-center');
+		overlay.classList.add('items-center');
+		gsap.to(overlay, {
+			opacity: 1,
+			duration: 0.3,
+			ease: 'linear',
+		});
+	});
+
+	const hideOverlay = contextSafe((e) => {
+		const item = e.target.parentNode;
+		const overlay = item.querySelector('.overlay');
+		gsap.to(overlay, {
+			opacity: 0,
+			duration: 0.3,
+			ease: 'linear',
+			onComplete: () => {
+				overlay.classList.add('hidden');
+				overlay.classList.remove('flex');
+				overlay.classList.remove('justify-center');
+				overlay.classList.remove('items-center');
+			},
+		});
+	});
+
 	return (
 		<div className="best-seller mt-16 flex flex-col gap-12 font-afacad">
 			<h2 className="uppercase text-black text-5xl font-semibold">best seller</h2>
-			<div className="products flex flex-wrap justify-center items-center gap-16">
+			<div ref={featuredRef} className="products flex flex-wrap justify-center items-center gap-5">
 				{featured.map((item) => {
 					return (
-						<div
-							className="product w-72 h-96 flex flex-col justify-between rounded-2xl shadow-2xl p-5"
-							key={`${item.id}`}
-						>
-							<img src={item.image} className="w-96 h-52 object-contain" />
-							<p className="text-center text-lg font-semibold">{item.name}</p>
-							<NavLink
-								to="shop"
-								className="w-full text-lg rounded-md bg-blue hover:bg-lightblue text-white p-3"
-							>
-								<button className="text-center w-full">Shop Now</button>
-							</NavLink>
+						<div className="product w-72 flex flex-col gap-4 flex-shrink-0" key={`${item.id}`}>
+							<div onMouseEnter={showOverlay} onMouseLeave={hideOverlay} className="relative">
+								<div>
+									<img src={item.image} alt={item.name} className="w-full h-[432px] object-cover" />
+									<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
+										<NavLink to="shop" className="w-28 text-l bg-white p-3">
+											<button className="text-center w-full">Shop Now</button>
+										</NavLink>
+									</div>
+								</div>
+							</div>
+							<div className="flex flex-col items-start text-lg font-semibold">
+								<p className="text-nowrap text-ellipsis overflow-hidden">{item.name}</p>
+								<p className="text-nowrap text-ellipsis overflow-hidden">${item.price}</p>
+							</div>
 						</div>
 					);
 				})}
@@ -125,7 +161,7 @@ function Carousel({ carouselItems }) {
 	});
 
 	return (
-		<div className="pb-32 w-full flex flex-col gap-10 font-afacad">
+		<div className="pb-32 w-full flex flex-col gap-12 font-afacad">
 			<div className="flex justify-start">
 				<h1 className="text-5xl font-semibold">YOU MAY ALSO LIKE</h1>
 			</div>
@@ -144,7 +180,11 @@ function Carousel({ carouselItems }) {
 								>
 									<div onMouseEnter={showOverlay} onMouseLeave={hideOverlay} className="relative">
 										<div>
-											<img src={item.image} alt={item.name} className="object-cover" />
+											<img
+												src={item.image}
+												alt={item.name}
+												className="w-full h-[432px] object-cover"
+											/>
 											<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
 												<NavLink to="shop" className="w-28 text-l bg-white p-3">
 													<button className="text-center w-full">Shop Now</button>
@@ -186,18 +226,18 @@ export default function MainBody({ products }) {
 		if (products) {
 			let featArr = [];
 			let carArr = [];
-			featArr.push(products[2]);
+			featArr.push(products[0]);
+			featArr.push(products[24]);
 			featArr.push(products[3]);
-			featArr.push(products[4]);
-			featArr.push(products[5]);
-			carArr.push(products[0]);
+			featArr.push(products[23]);
+			carArr.push(products[30]);
 			carArr.push(products[1]);
-			carArr.push(products[2]);
-			carArr.push(products[3]);
+			carArr.push(products[22]);
+			carArr.push(products[25]);
 			carArr.push(products[4]);
-			carArr.push(products[5]);
-			carArr.push(products[6]);
-			carArr.push(products[7]);
+			carArr.push(products[27]);
+			carArr.push(products[19]);
+			carArr.push(products[2]);
 			setFeatured([...featArr]);
 			setCarouselItems([...carArr]);
 		}
