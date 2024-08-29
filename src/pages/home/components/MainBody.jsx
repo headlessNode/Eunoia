@@ -1,4 +1,5 @@
 import LogoBar from './LogoBar';
+import NewsLetter from '../../components/NewsLetter';
 import { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -244,21 +245,14 @@ export default function MainBody({ products }) {
 	}, [products]);
 
 	return (
-		<div className="main-body px-3 w-full flex flex-col items-center">
-			<div className="max-w-8xl w-full font-montserrat">
+		<div className="main-body w-full flex flex-col items-center">
+			<div className="mx-3 max-w-8xl w-full font-montserrat">
 				<LogoBar />
 				<Featured featured={featured} />
 				<Exclusive />
 				<Carousel carouselItems={carouselItems} />
 			</div>
-			<div className="bg-blue w-full flex justify-center">
-				<div className="news-letter px-3 max-w-8xl w-full py-16 flex flex-col items-center gap-10 md:flex-row md:justify-between font-afacad">
-					<p className="text-white font-semibold text-4xl max-w-[360px] w-full text-center sm:text-start">
-						Sign up to our newsletter & get 20% Off
-					</p>
-					<button className="bg-white w-48 py-3 text-center text-xl font-semibold">SIGN UP FOR FREE</button>
-				</div>
-			</div>
+			<NewsLetter />
 		</div>
 	);
 }

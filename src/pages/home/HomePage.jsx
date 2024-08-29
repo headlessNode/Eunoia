@@ -10,7 +10,7 @@ export default function HomePage() {
 	const data = useLoaderData();
 
 	return (
-		<div className="wrapper flex flex-col items-center">
+		<div className="wrapper">
 			<div ref={heroRef} className="w-full h-screen flex flex-col items-center bg-hero-img bg-top bg-cover">
 				<Header ref={heroRef} />
 				<Hero />
