@@ -14,13 +14,13 @@ export default function Footer() {
 						<NavLink to="/" className="hover:underline">
 							Home
 						</NavLink>
-						<NavLink to="shop" className="hover:underline">
+						<NavLink to="/shop" className="hover:underline">
 							Shop
 						</NavLink>
-						<NavLink to="about" className="hover:underline">
+						<NavLink to="/about" className="hover:underline">
 							About
 						</NavLink>
-						<NavLink to="contact" className="hover:underline">
+						<NavLink to="/contact" className="hover:underline">
 							Contact
 						</NavLink>
 					</div>
@@ -28,13 +28,13 @@ export default function Footer() {
 				<div className="flex flex-col gap-3">
 					<p className="font-semibold text-xl">CATEGORIES</p>
 					<div className="flex flex-col gap-3">
-						<NavLink to="men" className="hover:underline">
+						<NavLink to="/men" className="hover:underline">
 							Men
 						</NavLink>
-						<NavLink to="women" className="hover:underline">
+						<NavLink to="/women" className="hover:underline">
 							Women
 						</NavLink>
-						<NavLink to="kids" className="hover:underline">
+						<NavLink to="/kids" className="hover:underline">
 							Kids
 						</NavLink>
 					</div>
