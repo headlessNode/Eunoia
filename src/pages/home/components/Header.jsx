@@ -22,16 +22,20 @@ const Header = forwardRef(function Header(props, ref) {
 
 	useGSAP(
 		() => {
-			const tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: ref.current,
-					start: 'center 40%',
-					//onEnter, onLeave, onEnterBack, onLeaveBack
-					toggleActions: 'play none none reverse',
-				},
-			});
-			tl.to(headerContainer.current, {
-				background: '#FFFFFF',
+			const mq = gsap.matchMedia();
+
+			mq.add('(min-width: 1024px)', () => {
+				const tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: ref.current,
+						start: 'center 40%',
+						//onEnter, onLeave, onEnterBack, onLeaveBack
+						toggleActions: 'play none none reverse',
+					},
+				});
+				tl.to(headerContainer.current, {
+					background: '#FFFFFF',
+				});
 			});
 		},
 		{ scope: ref.current }
