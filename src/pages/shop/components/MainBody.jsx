@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import BreadCrumbs from '../../components/BreadCrumbs';
@@ -9,6 +9,10 @@ function Products({ products }) {
 	const [itemsToShow, setItemsToShow] = useState([]);
 	const ref = useRef(null);
 	const { contextSafe } = useGSAP({ scope: ref.current });
+
+	useEffect(() => {
+		setItemsToShow([...products]);
+	}, [products]);
 
 	const showOverlay = contextSafe((e) => {
 		const item = e.target.parentNode;
@@ -56,7 +60,7 @@ function Products({ products }) {
 
 	return (
 		<div className="pb-32 flex flex-col gap-6">
-			<div className="categories flex gap-4">
+			<div className="categories flex gap-4 text-lg">
 				<button onClick={handleClick} className="uppercase bg-none p-3">
 					all
 				</button>
