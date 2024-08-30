@@ -2,8 +2,7 @@ import { useLocation, NavLink } from 'react-router-dom';
 
 export default function BreadCrumbs() {
 	const location = useLocation();
-	const pathname = location.pathname.split('/').filter((x) => x);
-
+	let pathname = location.pathname.split('/').filter((x) => x && x !== 'category');
 	return (
 		<div className="bread-crumbs flex gap-2 items-center font-montserrat">
 			<p className="text-lg">Home</p>
