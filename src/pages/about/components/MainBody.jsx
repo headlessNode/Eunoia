@@ -1,0 +1,40 @@
+import BreadCrumbs from '../../components/BreadCrumbs';
+
+export default function MainBody() {
+	return (
+		<div className="main-body w-full flex flex-col items-center">
+			<div className="max-w-8xl w-full font-afacad px-3">
+				<div className="title flex flex-col items-center gap-8 py-32">
+					<h1 className="text-7xl font-semibold">ABOUT US</h1>
+					<BreadCrumbs />
+				</div>
+				<div>
+					<img src="/images/about.avif" alt="image" className="w-full h-[400px] object-cover object-top" />
+					<div className="pt-16 flex justify-between items-center flex-wrap">
+						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl">SHOP ONLINE</h3>
+							<p>Explore a vast collection of premium clothing from the comfort of your home.</p>
+						</div>
+						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl">FREE SHIPPING</h3>
+							<p>Enjoy the convenience of free shipping on all orders, nationwide.</p>
+						</div>
+						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl">RETURN POLICY</h3>
+							<p>Your satisfaction is our priority. Return any product you are not satisfied with.</p>
+						</div>
+						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl">PAYMENT METHODS</h3>
+							<p>Choose from a variety of secure payment methods to complete your transactions.</p>
+						</div>
+					</div>
+					<div className="py-32">
+						<h3 className="text-center font-semibold text-3xl">
+							{`At the heart of Serrena lies a distinctive philosophy that transcends trends and embraces the essence of enduring style. Our collections are a harmonious blend of sophistication, versatility, and modernity, carefully curated to enhance your personal expression. We believe that fashion should empower, inspire, and reflect the unique narrative of every individual. Serrena is not just about clothing; it's about embracing a lifestyle that embraces the artistry of fashion and the poetry of self-expression.`}
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
