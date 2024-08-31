@@ -4,6 +4,7 @@
 		"name": "Regular Fit Leather Jacket",
 		"price": 299.0,
 		"category": "men",
+		"type": "jacket",
 		"image": "https://i.imgur.com/bXsuM2T.jpeg"
 	},
 	{
@@ -11,6 +12,7 @@
 		"name": "Cotton Twill Jacket",
 		"price": 120.0,
 		"category": "kids",
+		"type": "jacket",
 		"image": "https://i.imgur.com/3zZ7yOi.jpeg"
 	},
 	{
@@ -18,6 +20,7 @@
 		"name": "Twill Chinos",
 		"price": 60.0,
 		"category": "kids",
+		"type": "pants",
 		"image": "https://i.imgur.com/XBDxFZR.jpeg"
 	},
 	{
@@ -25,6 +28,7 @@
 		"name": "Cotton Printed Shirt",
 		"price": 190.0,
 		"category": "women",
+		"type": "shirt",
 		"image": "https://i.imgur.com/JB1s62G.jpeg"
 	},
 	{
@@ -32,6 +36,7 @@
 		"name": "Essential Green Cardigan",
 		"price": 350.0,
 		"category": "men",
+		"type": "jacket",
 		"image": "https://i.imgur.com/o6NVOgg.jpeg"
 	},
 	{
@@ -39,6 +44,7 @@
 		"name": "Cotton Polo Shirt",
 		"price": 65.0,
 		"category": "kids",
+		"type": "t-shirt",
 		"image": "https://i.imgur.com/khdgZxV.jpeg"
 	},
 	{
@@ -46,6 +52,7 @@
 		"name": "Slim Fit T-Shirt",
 		"price": 150.0,
 		"category": "men",
+		"type": "t-shirt",
 		"image": "https://i.imgur.com/QMqrnQH.jpeg"
 	},
 	{
@@ -53,6 +60,7 @@
 		"name": "Ruffle Spread Shirt",
 		"price": 350.0,
 		"category": "women",
+		"type": "shirt",
 		"image": "https://i.imgur.com/IfH7Lmc.jpeg"
 	},
 	{
@@ -60,6 +68,7 @@
 		"name": "Formal One-Piece Suit",
 		"price": 420.0,
 		"category": "women",
+		"type": "suit",
 		"image": "https://i.imgur.com/WchXhFp.jpeg"
 	},
 	{
@@ -67,6 +76,7 @@
 		"name": "Carpenter Joggers",
 		"price": 60.0,
 		"category": "kids",
+		"type": "pants",
 		"image": "https://i.imgur.com/V1IdlTl.jpeg"
 	},
 	{
@@ -74,6 +84,7 @@
 		"name": "Slim Fit Blocked Casual Shirt",
 		"price": 340.0,
 		"category": "women",
+		"type": "shirt",
 		"image": "https://i.imgur.com/y0D0KjN.jpeg"
 	},
 	{
@@ -81,6 +92,7 @@
 		"name": "Slim Fit Flared Twill Pants",
 		"price": 220.0,
 		"category": "men",
+		"type": "pants",
 		"image": "https://i.imgur.com/wPWJAeH.jpeg"
 	},
 	{
@@ -88,6 +100,7 @@
 		"name": "Oversized Fit Cotton T-Shirt",
 		"price": 150.0,
 		"category": "men",
+		"type": "t-shirt",
 		"image": "https://i.imgur.com/4e8IB4l.jpeg"
 	},
 	{
@@ -95,6 +108,7 @@
 		"name": "Water-Repellent Puffer Jacket",
 		"price": 75.0,
 		"category": "kids",
+		"type": "jacket",
 		"image": "https://i.imgur.com/Mgyb0QU.jpeg"
 	},
 	{
@@ -102,6 +116,7 @@
 		"name": "Denim Jacket",
 		"price": 75.0,
 		"category": "kids",
+		"type": "jacket",
 		"image": "https://i.imgur.com/FxJ1uqw.jpeg"
 	},
 	{
@@ -109,6 +124,7 @@
 		"name": "Linen-Blend Dress",
 		"price": 340.0,
 		"category": "women",
+		"type": "dress",
 		"image": "https://i.imgur.com/08SQtLQ.jpeg"
 	},
 	{
@@ -116,6 +132,7 @@
 		"name": "Denim Jacket",
 		"price": 200.0,
 		"category": "men",
+		"type": "jacket",
 		"image": "https://i.imgur.com/uv1xNuK.jpeg"
 	},
 	{
@@ -123,6 +140,7 @@
 		"name": "V-neck Flared Sleeves Dress",
 		"price": 280.0,
 		"category": "women",
+		"type": "dress",
 		"image": "https://i.imgur.com/TRpKJyo.jpeg"
 	},
 	{
@@ -130,6 +148,7 @@
 		"name": "Biker Jacket",
 		"price": 75.0,
 		"category": "kids",
+		"type": "jacket",
 		"image": "https://i.imgur.com/XTh31lx.jpeg"
 	},
 	{
@@ -137,12 +156,14 @@
 		"name": "Loose Jeans",
 		"price": 220.0,
 		"category": "men",
+		"type": "pants",
 		"image": "https://i.imgur.com/ie7SMU1.jpeg"
 	},
 	{
 		"id": 33,
 		"name": "Eyelet Embroidered Shirt",
 		"price": 340.0,
+		"type": "shirt",
 		"category": "women",
 		"image": "https://i.imgur.com/kFmU42N.jpeg"
 	},
@@ -151,6 +172,7 @@
 		"name": "Cotton Jersey T-Shirt",
 		"price": 50.0,
 		"category": "kids",
+		"type": "t-shirt",
 		"image": "https://i.imgur.com/L0DVfIn.jpeg"
 	},
 	{
@@ -165,6 +187,7 @@
 		"name": "Beige Zip-Up Coat",
 		"price": 300.0,
 		"category": "men",
+		"type": "jacket",
 		"image": "https://i.imgur.com/Fcdk42T.jpeg"
 	},
 	{
@@ -179,6 +202,7 @@
 		"name": "Viscose Shirt Dress",
 		"price": 340.0,
 		"category": "women",
+		"type": "dress",
 		"image": "https://i.imgur.com/BZrcYg5.jpeg"
 	},
 	{
@@ -193,6 +217,7 @@
 		"name": "Twill Jacket",
 		"price": 120.0,
 		"category": "kids",
+		"type": "jacket",
 		"image": "https://i.imgur.com/qi9dzqj.jpeg"
 	},
 	{
@@ -200,6 +225,7 @@
 		"name": "Oversized Crinkled Dress",
 		"price": 340.0,
 		"category": "women",
+		"type": "dress",
 		"image": "https://i.imgur.com/REBV9eV.jpeg"
 	},
 	{
@@ -207,6 +233,7 @@
 		"name": "Blue Jeans",
 		"price": 100.0,
 		"category": "men",
+		"type": "pants",
 		"image": "https://i.imgur.com/viHe1yx.jpeg"
 	},
 	{
@@ -214,6 +241,7 @@
 		"name": "Black Floral Chiffon Dress",
 		"price": 340.0,
 		"category": "women",
+		"type": "dress",
 		"image": "https://i.imgur.com/VIs516t.jpeg"
 	},
 	{
@@ -221,6 +249,7 @@
 		"name": "Twill Jacket",
 		"price": 120.0,
 		"category": "women",
+		"type": "jacket",
 		"image": "https://i.imgur.com/C5BKxQF.jpeg"
 	},
 	{
@@ -228,6 +257,7 @@
 		"name": "Urban Essential T-Shirt",
 		"price": 50.0,
 		"category": "kids",
+		"type": "t-shirt",
 		"image": "https://i.imgur.com/kU54BWh.jpeg"
 	},
 	{
@@ -235,6 +265,7 @@
 		"name": "Joggers",
 		"price": 60.0,
 		"category": "kids",
+		"type": "pants",
 		"image": "https://i.imgur.com/OmDki15.jpeg"
 	},
 	{
@@ -242,6 +273,7 @@
 		"name": "Trousers",
 		"price": 75.0,
 		"category": "kids",
+		"type": "pants",
 		"image": "https://i.imgur.com/V2LGWj3.jpeg"
 	},
 	{
@@ -249,6 +281,7 @@
 		"name": "Linen-Blend Shirt",
 		"price": 340.0,
 		"category": "women",
+		"type": "shirt",
 		"image": "https://i.imgur.com/t0BRgvw.jpeg"
 	}
 ]
