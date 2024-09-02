@@ -7,6 +7,7 @@ import ContactPage from './pages/contact/ContactPage.jsx';
 import MensPage from './pages/categories/MensPage.jsx';
 import WomensPage from './pages/categories/WomensPage.jsx';
 import KidsPage from './pages/categories/KidsPage.jsx';
+import Product from './pages/product/Product.jsx';
 import loader from './loader.js';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
 		path: 'category/kids',
 		element: <KidsPage />,
 		loader: loader,
+	},
+	{
+		path: 'product/:id',
+		element: <Product />,
 	},
 ]);
 

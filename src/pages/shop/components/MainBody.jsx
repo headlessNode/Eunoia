@@ -83,7 +83,7 @@ function Products({ products }) {
 									<img src={item.image} alt={item.name} className="w-full h-[432px] object-cover" />
 									<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
 										<NavLink
-											to="shop"
+											to={`/product/${item.id}`}
 											className="w-28 text-l bg-white p-3 hover:bg-blue hover:text-white"
 										>
 											<button className="text-center w-full">Buy Now</button>
