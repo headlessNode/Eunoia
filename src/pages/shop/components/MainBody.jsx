@@ -61,16 +61,16 @@ function Products({ products }) {
 	return (
 		<div className="pb-32 flex flex-col gap-6">
 			<div className="categories flex gap-4 text-lg">
-				<button onClick={handleClick} className="uppercase bg-none p-3">
+				<button onClick={handleClick} className="uppercase bg-none p-3 hover:underline">
 					all
 				</button>
-				<button onClick={handleClick} className="uppercase bg-none p-3">
+				<button onClick={handleClick} className="uppercase bg-none p-3 hover:underline">
 					men
 				</button>
-				<button onClick={handleClick} className="uppercase bg-none p-3">
+				<button onClick={handleClick} className="uppercase bg-none p-3 hover:underline">
 					women
 				</button>
-				<button onClick={handleClick} className="uppercase bg-none p-3">
+				<button onClick={handleClick} className="uppercase bg-none p-3 hover:underline">
 					kids
 				</button>
 			</div>
@@ -82,8 +82,11 @@ function Products({ products }) {
 								<div>
 									<img src={item.image} alt={item.name} className="w-full h-[432px] object-cover" />
 									<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
-										<NavLink to="shop" className="w-28 text-l bg-white p-3">
-											<button className="text-center w-full">Shop Now</button>
+										<NavLink
+											to="shop"
+											className="w-28 text-l bg-white p-3 hover:bg-blue hover:text-white"
+										>
+											<button className="text-center w-full">Buy Now</button>
 										</NavLink>
 									</div>
 								</div>

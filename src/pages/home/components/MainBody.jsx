@@ -110,7 +110,7 @@ function Carousel({ carouselItems }) {
 		if (itemsRef.current.length > 0) {
 			const arr = gsap.utils.toArray(itemsRef.current);
 			console.log(arr);
-			timeline.current = horizontalLoop(arr, { repeat: -1, paddingRight: 16 });
+			timeline.current = horizontalLoop(arr, { repeat: -1, paused: true, paddingRight: 16 });
 		}
 	}, [refsReady]);
 
@@ -154,11 +154,11 @@ function Carousel({ carouselItems }) {
 	});
 
 	const showNext = contextSafe(() => {
-		timeline.current.next({ duration: 1, ease: 'power1.inOut' });
+		timeline.current.next({ duration: 0.6, ease: 'power1.inOut' });
 	});
 
 	const showPrevious = contextSafe(() => {
-		timeline.current.previous({ duration: 1, ease: 'power1.inOut' });
+		timeline.current.previous({ duration: 0.6, ease: 'power1.inOut' });
 	});
 
 	return (

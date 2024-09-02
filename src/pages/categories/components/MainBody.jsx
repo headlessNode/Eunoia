@@ -62,7 +62,7 @@ function Products({ products, categories }) {
 		<div className="pb-32 flex flex-col gap-6">
 			<div className="categories flex gap-4 text-lg">
 				{categories.map((category, index) => (
-					<button key={index} onClick={handleClick} className="uppercase bg-none p-3">
+					<button key={index} onClick={handleClick} className="uppercase bg-none p-3 hover:underline">
 						{category}
 					</button>
 				))}
@@ -75,8 +75,11 @@ function Products({ products, categories }) {
 								<div>
 									<img src={item.image} alt={item.name} className="w-full h-[432px] object-cover" />
 									<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
-										<NavLink to="shop" className="w-28 text-l bg-white p-3">
-											<button className="text-center w-full">Shop Now</button>
+										<NavLink
+											to="shop"
+											className="w-28 text-l bg-white p-3 hover:bg-blue hover:text-white"
+										>
+											<button className="text-center w-full">Buy Now</button>
 										</NavLink>
 									</div>
 								</div>
