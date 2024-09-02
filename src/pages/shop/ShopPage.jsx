@@ -2,10 +2,16 @@ import Header from '../components/Header';
 import MainBody from './components/MainBody';
 import NewsLetter from '../components/NewsLetter';
 import Footer from '../components/Footer';
+import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 export default function ShopPage() {
 	const data = useLoaderData();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<div>
 			<Header />

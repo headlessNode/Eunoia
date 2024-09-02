@@ -4,10 +4,15 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import MainBody from './components/MainBody';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
 
 export default function HomePage() {
 	const heroRef = useRef(null);
 	const data = useLoaderData();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<div className="wrapper">
