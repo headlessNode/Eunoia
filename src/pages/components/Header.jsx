@@ -1,10 +1,12 @@
 import Menu from './Menu';
+import { ShopContext } from '../../App';
 import { NavLink } from 'react-router-dom';
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
 
 export default function Header() {
 	const headerContainer = useRef(null);
 	const [isMenuActive, setIsMenuActive] = useState(false);
+	const { cartItems } = useContext(ShopContext);
 
 	function showMenu() {
 		if (isMenuActive) {
@@ -50,8 +52,13 @@ export default function Header() {
 						<button>
 							<i className="fa-solid fa-magnifying-glass fa-xl"></i>
 						</button>
-						<NavLink>
-							<i className="fa-solid fa-bag-shopping fa-xl"></i>
+						<NavLink to="/cart" className="relative">
+							<div className="relative">
+								<i className="fa-solid fa-bag-shopping fa-xl"></i>
+								<div className="absolute top-3 left-2 bg-lightblue text-white h-4 w-4 flex justify-center items-center font-semibold text-sm rounded-sm">
+									<p>{cartItems.length}</p>
+								</div>
+							</div>
 						</NavLink>
 					</div>
 					<div className="menu-icon lg:hidden" onClick={showMenu}>

@@ -15,6 +15,7 @@ export default {
 			white: '#FFFFFF',
 			whiteTransparent: 'rgba(255, 255, 255, 0)',
 			black: '#000000',
+			red: 'rgb(255,0,0)',
 		},
 		fontFamily: {
 			montserrat: ['Montserrat', 'sans-serif'],

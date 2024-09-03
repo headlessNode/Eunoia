@@ -109,7 +109,6 @@ function Carousel({ carouselItems }) {
 	useEffect(() => {
 		if (itemsRef.current.length > 0) {
 			const arr = gsap.utils.toArray(itemsRef.current);
-			console.log(arr);
 			timeline.current = horizontalLoop(arr, { repeat: -1, paused: true, paddingRight: 16 });
 		}
 	}, [refsReady]);
