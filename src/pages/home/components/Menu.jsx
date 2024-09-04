@@ -48,22 +48,22 @@ export default function Menu({ isMenuActive }) {
 			ref={menu}
 			className={`menu max-w-8xl w-full pb-5 bg-white px-3 font-medium ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} overflow-hidden`}
 		>
-			<NavLink to="shop" className="uppercase hover:underline">
+			<NavLink to="/shop" className="uppercase hover:underline">
 				shop
 			</NavLink>
-			<NavLink to="category/men" className="uppercase hover:underline">
+			<NavLink to="/category/men" className="uppercase hover:underline">
 				men
 			</NavLink>
-			<NavLink to="category/women" className="uppercase hover:underline">
+			<NavLink to="/category/women" className="uppercase hover:underline">
 				women
 			</NavLink>
-			<NavLink to="category/kids" className="uppercase hover:underline">
+			<NavLink to="/category/kids" className="uppercase hover:underline">
 				kids
 			</NavLink>
-			<NavLink to="about" className="uppercase hover:underline">
+			<NavLink to="/about" className="uppercase hover:underline">
 				about
 			</NavLink>
-			<NavLink to="contact" className="uppercase hover:underline">
+			<NavLink to="/contact" className="uppercase hover:underline">
 				contact
 			</NavLink>
 		</div>
