@@ -28,14 +28,14 @@ function MainBody() {
 		gsap.timeline()
 			.to(banner.current, {
 				x: 224,
-				ease: 'linear',
+				ease: 'power.in',
 				duration: 0.4,
 			})
 			.to(banner.current, {
 				x: -224,
-				ease: 'linear',
-				duration: 0.3,
-				delay: 2,
+				ease: 'power.out',
+				duration: 0.4,
+				delay: 1.5,
 			});
 	});
 
