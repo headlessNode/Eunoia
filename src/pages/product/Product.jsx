@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import NewsLetter from '../components/NewsLetter';
 import Footer from '../components/Footer';
 import { ShopContext } from '../../App';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useParams, NavLink } from 'react-router-dom';
 import { useEffect, useState, useContext, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -91,6 +91,11 @@ function MainBody() {
 							>
 								add to cart
 							</button>
+							<NavLink to="/cart">
+								<button className="bg-blue uppercase text-white p-4 hover:bg-lightblue">
+									go to cart
+								</button>
+							</NavLink>
 						</div>
 						<div className="flex flex-col gap-3">
 							<h3 className="uppercase font-semibold text-2xl">size and fit</h3>
