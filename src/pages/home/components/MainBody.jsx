@@ -244,8 +244,8 @@ export default function MainBody({ products }) {
 	}, [products]);
 
 	return (
-		<div className="main-body w-full flex flex-col items-center">
-			<div className="mx-3 max-w-8xl w-full font-montserrat">
+		<div className="main-body px-3 w-full flex flex-col items-center">
+			<div className="max-w-8xl w-full font-montserrat">
 				<LogoBar />
 				<Featured featured={featured} />
 				<Exclusive />

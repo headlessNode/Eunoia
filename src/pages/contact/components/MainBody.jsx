@@ -2,8 +2,8 @@ import BreadCrumbs from '../../components/BreadCrumbs';
 
 export default function MainBody() {
 	return (
-		<div className="main-body w-full flex flex-col items-center">
-			<div className="max-w-8xl w-full font-afacad px-3">
+		<div className="main-body px-3 w-full flex flex-col items-center">
+			<div className="max-w-8xl w-full font-afacad">
 				<div className="title flex flex-col items-center gap-8 py-32">
 					<h1 className="text-6xl sm:text-7xl font-semibold text-center">CONTACT US</h1>
 					<BreadCrumbs />

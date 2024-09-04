@@ -63,8 +63,8 @@ function MainBody() {
 
 	if (cartItems.length === 0) {
 		return (
-			<div className="main-body w-full flex flex-col items-center">
-				<div className="max-w-8xl w-full font-afacad px-3 pb-32">
+			<div className="main-body px-3 w-full flex flex-col items-center">
+				<div className="max-w-8xl w-full font-afacad pb-32">
 					<div className="title py-24">
 						<h1 className="text-center font-semibold text-5xl uppercase">Your Cart</h1>
 					</div>

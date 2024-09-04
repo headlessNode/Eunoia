@@ -16,7 +16,7 @@ export default function HomePage() {
 
 	return (
 		<div className="wrapper">
-			<div ref={heroRef} className="w-full h-screen flex flex-col items-center bg-hero-img bg-top bg-cover">
+			<div ref={heroRef} className="w-full px-3 h-screen flex flex-col items-center bg-hero-img bg-top bg-cover">
 				<Header ref={heroRef} />
 				<Hero />
 			</div>
