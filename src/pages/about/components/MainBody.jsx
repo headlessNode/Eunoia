@@ -5,27 +5,35 @@ export default function MainBody() {
 		<div className="main-body w-full flex flex-col items-center">
 			<div className="max-w-8xl w-full font-afacad px-3">
 				<div className="title flex flex-col items-center gap-8 py-32">
-					<h1 className="text-7xl font-semibold">ABOUT US</h1>
+					<h1 className="text-7xl font-semibold text-center">ABOUT US</h1>
 					<BreadCrumbs />
 				</div>
 				<div>
 					<img src="/images/about.avif" alt="image" className="w-full h-[400px] object-cover object-top" />
-					<div className="pt-16 flex justify-between items-center flex-wrap">
-						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
-							<h3 className="font-semibold text-2xl">SHOP ONLINE</h3>
-							<p>Explore a vast collection of premium clothing from the comfort of your home.</p>
+					<div className="pt-16 flex flex-col items-center sm:flex-row sm: justify-between">
+						<div className="sm:w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl text-center sm:text-start">SHOP ONLINE</h3>
+							<p className="text-center sm:text-start">
+								Explore a vast collection of premium clothing from the comfort of your home.
+							</p>
 						</div>
-						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
-							<h3 className="font-semibold text-2xl">FREE SHIPPING</h3>
-							<p>Enjoy the convenience of free shipping on all orders, nationwide.</p>
+						<div className="sm:w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl text-center sm:text-start">FREE SHIPPING</h3>
+							<p className="text-center sm:text-start">
+								Enjoy the convenience of free shipping on all orders, nationwide.
+							</p>
 						</div>
-						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
-							<h3 className="font-semibold text-2xl">RETURN POLICY</h3>
-							<p>Your satisfaction is our priority. Return any product you are not satisfied with.</p>
+						<div className="sm:w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl text-center sm:text-start">RETURN POLICY</h3>
+							<p className="text-center sm:text-start">
+								Your satisfaction is our priority. Return any product you are not satisfied with.
+							</p>
 						</div>
-						<div className="w-1/5 h-40 flex flex-col justify-center gap-4">
-							<h3 className="font-semibold text-2xl">PAYMENT METHODS</h3>
-							<p>Choose from a variety of secure payment methods to complete your transactions.</p>
+						<div className="sm:w-1/5 h-40 flex flex-col justify-center gap-4">
+							<h3 className="font-semibold text-2xl text-center sm:text-start">PAYMENT METHODS</h3>
+							<p className="text-center sm:text-start">
+								Choose from a variety of secure payment methods to complete your transactions.
+							</p>
 						</div>
 					</div>
 					<div className="py-32">
