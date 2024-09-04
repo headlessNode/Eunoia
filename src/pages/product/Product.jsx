@@ -40,8 +40,8 @@ function MainBody() {
 	});
 
 	function addItemToCart() {
-		const value = quantity.current.value !== '' ? parseInt(quantity.current.value) : '';
-		if (value >= 1 && value <= 10) {
+		const value = parseInt(quantity.current.value, 10);
+		if (!isNaN(value) && value >= 0 && value <= 10) {
 			const item = {
 				prd: prd,
 				amount: parseInt(quantity.current.value),

@@ -36,6 +36,9 @@ function MainBody() {
 				ease: 'power.out',
 				duration: 0.4,
 				delay: 1.5,
+				onComplete: () => {
+					modifyCart([]);
+				},
 			});
 	});
 
@@ -47,10 +50,12 @@ function MainBody() {
 	}
 
 	function handleChange(e, id) {
-		if (e.target.value !== '' && e.target.value !== '0') {
+		const value = parseInt(e.target.value, 10);
+
+		if (!isNaN(value) && value >= 0 && value <= 10) {
 			let cartCopy = [...cartItems];
 			const prd = cartCopy.filter((item) => item.prd.id === id).pop();
-			prd.amount = parseInt(e.target.value);
+			prd.amount = value;
 			modifyCart(cartCopy);
 		}
 	}
@@ -63,7 +68,10 @@ function MainBody() {
 
 	if (cartItems.length === 0) {
 		return (
-			<div className="main-body px-3 w-full flex flex-col items-center">
+			<div ref={container} className="main-body px-3 w-full flex flex-col items-center">
+				<div ref={banner} className="fixed top-1/3 -left-56 w-56 p-2 bg-blue confirmation">
+					<p className="text-white">Thank you for purchasing.</p>
+				</div>
 				<div className="max-w-8xl w-full font-afacad pb-32">
 					<div className="title py-24">
 						<h1 className="text-center font-semibold text-5xl uppercase">Your Cart</h1>
@@ -127,7 +135,7 @@ function MainBody() {
 												type="number"
 												name="quantity"
 												id="quantity"
-												className="hidden sm:block border border-black py-1 w-8 h-8 text-center"
+												className="hidden sm:block border border-black py-1 w-9 h-9 text-center"
 												value={item.amount}
 												onChange={(e) => handleChange(e, item.prd.id)}
 												min={1}
@@ -161,7 +169,7 @@ function MainBody() {
 												value={item.amount}
 												min={1}
 												max={10}
-												className="border border-black py-1 w-8 text-center"
+												className="border border-black py-1 w-9 h-9 text-center"
 											/>
 										</div>
 									</div>
