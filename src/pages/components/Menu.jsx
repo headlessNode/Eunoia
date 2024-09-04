@@ -44,28 +44,30 @@ export default function Menu({ isMenuActive }) {
 	}, [isMenuActive]);
 
 	return (
-		<div
-			ref={menu}
-			className={`menu max-w-8xl w-full pb-5 bg-white px-3 font-medium ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} overflow-hidden`}
-		>
-			<NavLink to="shop" className="uppercase hover:underline">
-				shop
-			</NavLink>
-			<NavLink to="category/men" className="uppercase hover:underline">
-				men
-			</NavLink>
-			<NavLink to="category/women" className="uppercase hover:underline">
-				women
-			</NavLink>
-			<NavLink to="category/kids" className="uppercase hover:underline">
-				kids
-			</NavLink>
-			<NavLink to="about" className="uppercase hover:underline">
-				about
-			</NavLink>
-			<NavLink to="contact" className="uppercase hover:underline">
-				contact
-			</NavLink>
+		<div className="relative w-full">
+			<div
+				ref={menu}
+				className={`absolute z-10 menu max-w-8xl w-full pb-5 bg-white font-medium ${isMenuActive ? 'flex flex-col gap-2' : 'hidden'} overflow-hidden`}
+			>
+				<NavLink to="/shop" className="uppercase hover:underline">
+					shop
+				</NavLink>
+				<NavLink to="/category/men" className="uppercase hover:underline">
+					men
+				</NavLink>
+				<NavLink to="/category/women" className="uppercase hover:underline">
+					women
+				</NavLink>
+				<NavLink to="/category/kids" className="uppercase hover:underline">
+					kids
+				</NavLink>
+				<NavLink to="/about" className="uppercase hover:underline">
+					about
+				</NavLink>
+				<NavLink to="/contact" className="uppercase hover:underline">
+					contact
+				</NavLink>
+			</div>
 		</div>
 	);
 }
