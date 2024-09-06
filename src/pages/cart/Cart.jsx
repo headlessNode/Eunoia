@@ -179,7 +179,7 @@ function MainBody() {
 					</div>
 					<div className="flex flex-col gap-12 md:flex-row md:justify-between">
 						<div className="md:w-[472px] flex flex-col items-center gap-4">
-							<p className="w-full text-lg text-black text-opacity-50">{`Is this a gift? Please let us know if you would like your items wrapped. If you have multiple items in an order, please note they will be bundled together unless otherwise specified in the notes to wrap items individually. If you would like a message included with your gift, simply add it in the box below. Please click on the "Update" button once completed to ensure your message is saved.`}</p>
+							<p className="w-full text-lg text-black text-opacity-50">{`Is this a gift? Please let us know if you would like your items wrapped. If you have multiple items in an order, please note they will be bundled together unless otherwise specified in the notes to wrap items individually. If you would like a message included with your gift, simply add it in the box below.`}</p>
 							<textarea
 								name="message"
 								id="message"
