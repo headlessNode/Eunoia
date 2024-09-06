@@ -190,7 +190,7 @@ function Carousel({ carouselItems }) {
 											/>
 											<div className="overlay hidden opacity-0 w-full h-full absolute top-0 left-0 bg-black bg-opacity-25">
 												<NavLink
-													to="shop"
+													to="/shop"
 													className="w-28 text-l bg-white p-3 hover:bg-blue hover:text-white"
 												>
 													<button className="text-center w-full">Shop Now</button>

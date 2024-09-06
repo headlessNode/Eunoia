@@ -33,6 +33,7 @@ const Header = forwardRef(function Header(props, ref) {
 						start: 'center 40%',
 						//onEnter, onLeave, onEnterBack, onLeaveBack
 						toggleActions: 'play none none reverse',
+						markers: true,
 					},
 				});
 				tl.to(headerContainer.current, {
