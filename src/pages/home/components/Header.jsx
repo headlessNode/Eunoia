@@ -39,6 +39,7 @@ const Header = forwardRef(function Header(props, ref) {
 			tl.to(headerContainer.current, {
 				background: '#FFFFFF',
 			});
+			ScrollTrigger.refresh();
 		});
 	}, [ref]);
 
