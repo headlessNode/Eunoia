@@ -29,8 +29,7 @@ const Header = forwardRef(function Header(props, ref) {
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: ref.current,
-					start: 'center 40%',
-					end: 'center top',
+					start: 'top 40%',
 					//onEnter, onLeave, onEnterBack, onLeaveBack
 					toggleActions: 'play none none reverse',
 					markers: true,
@@ -39,9 +38,8 @@ const Header = forwardRef(function Header(props, ref) {
 			tl.to(headerContainer.current, {
 				background: '#FFFFFF',
 			});
-			ScrollTrigger.refresh();
 		});
-	}, [ref]);
+	});
 
 	return (
 		<div className="fixed w-full flex flex-col items-center z-10">
