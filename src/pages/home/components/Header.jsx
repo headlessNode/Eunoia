@@ -2,13 +2,13 @@ import TopBar from './TopBar';
 import Menu from './Menu';
 import { NavLink } from 'react-router-dom';
 import { ShopContext } from '../../../App';
-import { forwardRef, useRef, useState, useContext } from 'react';
+import { useRef, useState, useContext } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
-const Header = forwardRef(function Header(props, ref) {
+export default function Header() {
 	const headerContainer = useRef(null);
 	const topBar = useRef(null);
 	const [isMenuActive, setIsMenuActive] = useState(false);
@@ -22,26 +22,23 @@ const Header = forwardRef(function Header(props, ref) {
 		}
 	}
 
-	useGSAP(
-		() => {
-			const mq = gsap.matchMedia();
+	useGSAP(() => {
+		const mq = gsap.matchMedia();
 
-			mq.add('(min-width: 1024px)', () => {
-				const tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: ref.current,
-						start: 'center 40%',
-						//onEnter, onLeave, onEnterBack, onLeaveBack
-						toggleActions: 'play none none reverse',
-					},
-				});
-				tl.to(headerContainer.current, {
-					background: '#FFFFFF',
-				});
+		mq.add('(min-width: 1024px)', () => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: headerContainer.current,
+					start: '500 40%',
+					//onEnter, onLeave, onEnterBack, onLeaveBack
+					toggleActions: 'play none none reverse',
+				},
 			});
-		},
-		{ scope: ref.current }
-	);
+			tl.to(headerContainer.current, {
+				background: '#FFFFFF',
+			});
+		});
+	});
 
 	return (
 		<div className="fixed w-full flex flex-col items-center z-10">
@@ -112,6 +109,4 @@ const Header = forwardRef(function Header(props, ref) {
 			</div>
 		</div>
 	);
-});
-
-export default Header;
+}

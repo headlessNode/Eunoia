@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import { useEffect } from 'react';
 
 export default function HomePage() {
-	const heroRef = useRef(null);
 	const data = useLoaderData();
 
 	useEffect(() => {
@@ -16,8 +15,8 @@ export default function HomePage() {
 
 	return (
 		<div className="wrapper">
-			<div ref={heroRef} className="w-full px-3 h-screen flex flex-col items-center bg-hero-img bg-top bg-cover">
-				<Header ref={heroRef} />
+			<div className="w-full px-3 h-screen flex flex-col items-center bg-hero-img bg-top bg-cover">
+				<Header />
 				<Hero />
 			</div>
 			<MainBody products={data} />
