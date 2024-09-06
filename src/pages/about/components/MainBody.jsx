@@ -38,7 +38,7 @@ export default function MainBody() {
 					</div>
 					<div className="py-32">
 						<h3 className="text-center font-semibold text-3xl">
-							{`At the heart of Serrena lies a distinctive philosophy that transcends trends and embraces the essence of enduring style. Our collections are a harmonious blend of sophistication, versatility, and modernity, carefully curated to enhance your personal expression. We believe that fashion should empower, inspire, and reflect the unique narrative of every individual. Serrena is not just about clothing; it's about embracing a lifestyle that embraces the artistry of fashion and the poetry of self-expression.`}
+							{`At the heart of Eunoia lies a distinctive philosophy that transcends trends and embraces the essence of enduring style. Our collections are a harmonious blend of sophistication, versatility, and modernity, carefully curated to enhance your personal expression. We believe that fashion should empower, inspire, and reflect the unique narrative of every individual. Serrena is not just about clothing; it's about embracing a lifestyle that embraces the artistry of fashion and the poetry of self-expression.`}
 						</h3>
 					</div>
 				</div>
