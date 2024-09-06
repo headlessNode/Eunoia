@@ -2,7 +2,7 @@ import TopBar from './TopBar';
 import Menu from './Menu';
 import { NavLink } from 'react-router-dom';
 import { ShopContext } from '../../../App';
-import { forwardRef, useRef, useState, useContext } from 'react';
+import { forwardRef, useRef, useState, useEffect, useContext } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
@@ -29,7 +29,7 @@ const Header = forwardRef(function Header(props, ref) {
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: ref.current,
-					start: 'top 40%',
+					start: 'center 40%',
 					//onEnter, onLeave, onEnterBack, onLeaveBack
 					toggleActions: 'play none none reverse',
 					markers: true,
@@ -39,7 +39,16 @@ const Header = forwardRef(function Header(props, ref) {
 				background: '#FFFFFF',
 			});
 		});
-	});
+	}, []);
+
+	useEffect(() => {
+		// Refresh ScrollTrigger after a short delay to ensure all content is loaded
+		const refreshTimer = setTimeout(() => {
+			ScrollTrigger.refresh();
+		}, 500);
+
+		return () => clearTimeout(refreshTimer);
+	}, []);
 
 	return (
 		<div className="fixed w-full flex flex-col items-center z-10">
